@@ -36,6 +36,9 @@ Route::middleware(['auth'])->prefix('user')->group(function () {
     Route::get('/mint_my_arts', 'MintController@mintMyArts')->name('user.mint');
     Route::get('/upload_arts', 'UploadController@uploadArts')->name('upload.arts');
     Route::post('/post_uploaded_arts', 'UploadController@postUploadedArts')->name('post.uploadedarts');
+    Route::get('/art_mint_confrimation','UploadController@mintConfirm')->name('mint.confirm');
+    Route::get('/make_payments', 'UploadController@makePayments')->name('make.payments');
+    Route::get('/transaction_in_progress', 'UploadController@transactProgress')->name('transact.progress');
     Route::get('/art_collection_details/{id}', 'UploadController@artCollectiondetails')->name('art.collectiondetails');
 
     Route::get('/multiple_image_page','MultimageController@multImage')->name('multi.image');

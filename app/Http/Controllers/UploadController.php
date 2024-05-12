@@ -39,8 +39,22 @@ class UploadController extends Controller
             }
         }
 
-        return redirect()->route('art.collectiondetails', $post_uploadedarts->id)->withSuccess('flash_message', 'Submitted Successfully.')->with('flash_type', 'alert-success');
+        return redirect()->route('mint.confirm');
     }
+
+    public function mintConfirm(){
+        return view('user.art_mint_confirmation');
+
+    }
+    public function makePayments(){
+        return view('user.make_payments');
+    }
+
+    public function transactProgress(){
+        return view('user.transaction_in_progress');
+    }
+
+
 
     public function artCollectiondetails($id)
     {

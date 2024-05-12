@@ -55,42 +55,44 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="row">
-                                <div class="col-md-4 mb-4"></div>
+                            <div class="row" style="margin-bottom: -50px;">
+                                {{-- <div class="col-md-4 mb-4"></div> --}}
                                 <div class="col-md-4 mb-4">
                                     <label class="form-label title_lab" for="exampleFormControlTextarea4">Art Title:</label>
                                     <div class="container card card-body">
                                         <h4 class="title_head">{{ $post_uploadedarts[0]->upload->title }}</h4>
                                     </div>
                                 </div>
-                                <div class="col-md-4 mb-4"></div>
+                                {{-- <div class="col-md-4 mb-4"></div> --}}
 
 
                             </div>
 
                             <div class="col-xxl-12">
-                                <br>
                                 <div class="row">
-                                    <div class="col-md-4 mb-4"></div>
+                                    {{-- <div class="col-md-4 mb-4"></div> --}}
                                     <div class="col-md-4 mb-4">
                                         <label class="form-label desc_lab">Art Description:</label>
                                         <div class="container card card-body">
                                             <h4 class="desc_head">{{ $post_uploadedarts[0]->upload->description }}</h4>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 mb-4"></div>
+                                    {{-- <div class="col-md-4 mb-4"></div> --}}
                                 </div>
 
-                                <div class="container card card-body">
+                                <div class="container card card-body" style="margin-bottom: -30px; margin-left:-20px;">
                                     <p>Congratulations Your Art has been successfully Minted,kindly copy the Url below and
                                         contact your buyer</p>
                                 </div>
 
-                                <div class="row">
-                                     <div class="col-md-1"><h3>Url:</h3></div>
+                                <div class="row"
+                                    style="background-color: #030b21; padding:10px 10px;margin:0px 5px; border-radius:10px;">
+                                    <div class="col-md-1">
+                                        <h3 style="background-color: white">Url:</h3>
+                                    </div>
                                     <div class="col-md-9" style="margin-left:-30px; margin-top:8px;">
                                         <a href="">
-                                            <p id="text">@auth
+                                            <p id="text" style="color: #00ffa3">@auth
                                                     {{-- env('APP_URL'). '/user/upload_arts/'.$post_uploadedarts[0]->upload->id --}}
                                                     {{-- {{ env('DB_HOST').':8000'. '/user/order_details/'.$place->transaction_id}} --}}
                                                     <?php

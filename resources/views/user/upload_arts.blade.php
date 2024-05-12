@@ -115,7 +115,7 @@
 
                                     <div class="col-xxl-12">
                                     </div>
-                                    <div class="btn"><button type="submit" class="btn btn-primary mr-2">Mint</button>
+                                    <div class="btn minting_nft_art"><button type="submit" class="btn btn-primary mr-2">Mint</button>
                                     </div>
                                 </div>
                             </form>
@@ -125,4 +125,5 @@
             </div>
         </div>
     </div>
+   
 @endsection

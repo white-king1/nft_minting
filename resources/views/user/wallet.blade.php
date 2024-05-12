@@ -263,6 +263,18 @@
                                     <div class="top-creators-user-img me-3"><img src="/assets_dashboard/images/items/item_1.html" alt=""
                                             width="60"></div>
                                     <div class="top-creators-info">
+                                        <h5 class="mb-0">Mint Fee</h5>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <h5 class="text-primary">0.11 ETH</h5>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between creator-widget active  align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <div class="top-creators-user-img me-3"><img src="/assets_dashboard/images/items/item_1.html" alt=""
+                                            width="60"></div>
+                                    <div class="top-creators-info">
                                         <h5 class="mb-0">Minted Arts</h5>
                                         <p class="mb-2">60 Items</p>
                                     </div>
@@ -280,18 +292,7 @@
                                 </div>
 
                             </div>
-                            <div class="d-flex justify-content-between creator-widget active  align-items-center">
-                                <div class="d-flex align-items-center">
-                                    <div class="top-creators-user-img me-3"><img src="/assets_dashboard/images/items/item_1.html" alt=""
-                                            width="60"></div>
-                                    <div class="top-creators-info">
-                                        <h5 class="mb-0">Mint Fee</h5>
-                                    </div>
-                                </div>
-                                <div class="text-end">
-                                    <h5 class="text-primary">0.11 ETH</h5>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>

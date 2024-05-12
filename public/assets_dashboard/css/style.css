@@ -140,19 +140,21 @@ h4, .h4 {
 }
 
 .title_lab{
-    margin-left: 150px !important;
+    margin-left: 20px !important;
 }
 .desc_lab{
-    margin-left: 150px !important;
+    /* margin-left: 150px !important; */
+    margin-left: 20px !important;
+
 }
 
 .title_head{
-    margin-left: 110px !important;
+    /* margin-left: -10px !important; */
     width: 400px;
     margin-top:-30px;
 }
 .desc_head{
-    margin-left: 30px !important;
+    /* margin-left: 30px !important; */
     width: 400px;
     margin-top:-30px;
 }
@@ -2539,8 +2541,8 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #6f4ef2;
-  border-color: #6f4ef2;
+  background-color: #00ffa3;
+  border-color: #00ffa3;
   width: 150px;
 }
   .btn-primary:hover {
