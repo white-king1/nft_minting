@@ -46,3 +46,15 @@ Route::middleware(['auth'])->prefix('user')->group(function () {
 
 
 });
+
+// ADMIN MIDDLEWARE AUTHENTICATION ACCESS ROUTE
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/dashboard', 'HomeController@redirect')->name('redirect');
+    Route::get('/admin-dashboard', 'AdminController@admin')->name('admin');
+    Route::get('/all_users', 'AllUsersController@allUsers')->name('all.users');
+    Route::get('/delete_users/{id}', 'AllUsersController@deleteUsers')->name('delete.users');
+    Route::get('/restrict_users/{id}', 'AllUsersController@restrictUsers')->name('restrict.users');
+
+
+
+});
