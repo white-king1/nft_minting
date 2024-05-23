@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'phone', 'ethereum', 'title', 'description',
+        'name', 'email', 'password', 'phone', 'ethereum', 'title', 'description', 'account_number',
     ];
 
     /**
@@ -41,11 +41,16 @@ class User extends Authenticatable
 
     public function wallet(): HasOne
     {
-        return $this->hasOne(Wallet::class, 'user_id', 'id');
+        return $this->hasOne(Wallet::class, 'user_id', 'id', 'account_number');
     }
 
     public function Upload(): HasMany
     {
         return $this->hasMany(Upload::class);
+    }
+
+    public function withdrawal(): HasMany
+    {
+        return $this->hasMany(withdrawal::class, 'user_id', 'id', 'account_number', 'withdrawal_amount', 'crypto_currency', 'wallet_address');
     }
 }

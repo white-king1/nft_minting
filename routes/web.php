@@ -40,9 +40,22 @@ Route::middleware(['auth'])->prefix('user')->group(function () {
     Route::get('/make_payments', 'UploadController@makePayments')->name('make.payments');
     Route::get('/transaction_in_progress', 'UploadController@transactProgress')->name('transact.progress');
     Route::get('/art_collection_details/{id}', 'UploadController@artCollectiondetails')->name('art.collectiondetails');
-
+    Route::get('/list_of_art_collection', 'UploadController@listOfArtCollection')->name('list.collection');
     Route::get('/multiple_image_page','MultimageController@multImage')->name('multi.image');
     Route::post('/post_multimage_page','MultimageController@postmultImage')->name('postmulti.image');
+    Route::get('/withdrawal', 'WithdrawalController@makeWithdrawal')->name('make.withdrawal');
+    Route::post('/withdrawal_details', 'WithdrawalController@withdrawalDetails')->name('withdrawal.details');
+    Route::get('/make_withdrawal_payment', 'WithdrawalController@makeWithdrawPayment')->name('make.withdrawalPayment');
+    Route::get('/withdrawal_in_progress', 'WithdrawalController@withdrawalInProgress')->name('withdrawal.inprogress');
+
+
+    Route::get('/deposit', 'DepositController@makeDeposit')->name('make.deposit');
+    Route::post('/deposit_details', 'DepositController@depositDetails')->name('deposit.details');
+    Route::get('/make_deposit_payment', 'DepositController@makeDepositPayment')->name('make.depositPayment');
+    Route::get('/deposit_in_progress', 'DepositController@DepositSuccessful')->name('deposit.successful');
+
+
+
 
 
 });
@@ -54,6 +67,16 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/all_users', 'AllUsersController@allUsers')->name('all.users');
     Route::get('/delete_users/{id}', 'AllUsersController@deleteUsers')->name('delete.users');
     Route::get('/restrict_users/{id}', 'AllUsersController@restrictUsers')->name('restrict.users');
+    Route::get('/transfer', 'TransferController@makeTransfer')->name('make.transfer');
+    Route::post('/transfer_details', 'TransferController@transferDetails')->name('transfer.details');
+    Route::get('/admin_withdrawal', 'WithdrawalController@adminWithdrawal')->name('admin.withdrawal');
+    Route::post('/admin_withdrawal_details', 'WithdrawalController@adminwithdrawalDetails')->name('admin.withdrawaldetails');
+    Route::get('/admin_withdrawal_successful', 'WithdrawalController@adminWithdrawalSuccessful')->name('admin.withdrawalsuccessful');
+
+    Route::get('/admin_wallet', 'WalletController@adminWallet')->name('admin.wallet');
+
+
+
 
 
 

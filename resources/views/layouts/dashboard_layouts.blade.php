@@ -33,7 +33,7 @@
                     <div class="col-xxl-12">
                         <div class="header-content">
                             <div class="header-left">
-                                <div class="brand-logo"><a class="mini-logo" href="index-2.html"><img
+                                <div class="brand-logo"><a class="mini-logo" href="{{route ('user.dashboard')}}"><img
                                             src="/assets_dashboard/images/logoi.png" alt="" width="40"></a>
                                 </div>
                                 <div class="search">
@@ -115,26 +115,41 @@
                                                     <img src="/assets_dashboard/images/profile/3.png" alt="">
                                                 </span>
                                                 <div class="user-info">
-                                                    <h5>Jannatul Maowa</h5>
-                                                    <span>imsaifun@gmail.com</span>
+                                                    <h5>{{Auth::user()->name}}</h5>
+                                                    <span>{{ Auth::user()->email }}</span>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <a class="dropdown-item" href="{{ route('user.wallet') }}">
+                                            <span><i class="ri-wallet-line"></i></span>Wallet
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('user.mint') }}">
+                                            <span><i class="ri-heart-line"></i></span>
+                                            Mint
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('make.withdrawal') }}">
+                                            <span><i class="ri-briefcase-line"></i></span>
+                                            Withdrawal
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('make.deposit') }}">
+                                            <span><i class="ri-briefcase-line"></i></span>
+                                            Deposit
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('list.collection') }}">
+                                            <span><i class="ri-star-line"></i></span>
+                                            Collection
+                                        </a>
                                         <a class="dropdown-item" href="profile.html">
                                             <span><i class="ri-user-line"></i></span>Profile
-                                        </a>
-                                        <a class="dropdown-item" href="wallet.html">
-                                            <span><i class="ri-wallet-line"></i></span>Wallet
                                         </a>
                                         <a class="dropdown-item" href="settings-profile.html">
                                             <span><i class="ri-settings-3-line"></i></span>Settings
                                         </a>
-                                        <a class="dropdown-item" href="settings-activity.html">
-                                            <span><i class="ri-time-line"></i></span>Activity
-                                        </a>
-                                        <a class="dropdown-item" href="lock.html">
+
+                                        {{-- <a class="dropdown-item" href="{{route('login')}}">
                                             <span><i class="ri-lock-line"></i></span>Lock
-                                        </a>
+                                        </a> --}}
 
                                         <a class="dropdown-item logout" onclick="logout()" href="">
                                             <button class="btn btn-primary px-3">
@@ -154,16 +169,16 @@
             </div>
         </div>
         <div class="sidebar">
-            <div class="brand-logo"><a class="full-logo" href="index-2.html"><img
+            <div class="brand-logo"><a class="full-logo" href="{{ route('user.dashboard') }}"><img
                         src="/assets_dashboard/images/logoi.png" alt="" width="30"></a></div>
             <div class="menu">
                 <ul>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('user.dashboard') }}">
                             <span><i class="ri-layout-grid-fill"></i></span>
                             <span class="nav-text">Dashboard</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="">
                         <a href="{{ route('user.wallet') }}">
                             <span><i class="ri-wallet-line"></i></span>
@@ -171,16 +186,24 @@
                     </li>
                     <li class="">
                         <a href="{{ route('user.mint') }}">
-                            <span><i class="ri-briefcase-line"></i></span>
+                            <span><i class="ri-heart-line"></i></span>
                             <span class="nav-text">Mint</span></a>
                     </li>
                     <li class="">
-                        <a href="saved.html">
-                            <span><i class="ri-heart-line"></i></span>
-                            <span class="nav-text">Saved</span></a>
+                        <a href="{{route ('make.withdrawal')}}">
+                            <span><i class="ri-briefcase-line"></i></span>
+
+                            <span class="nav-text">Withdrawal</span>
+                        </a>
                     </li>
                     <li class="">
-                        <a href="collection.html">
+                        <a href="{{route ('make.deposit')}}">
+                            <span><i class="ri-briefcase-line"></i></span>
+                            <span class="nav-text">Deposit</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{{ route('list.collection') }}">
                             <span><i class="ri-star-line"></i></span>
                             <span class="nav-text">Collection</span></a>
                     </li>
@@ -197,13 +220,13 @@
                     </li>
                     <br>
                     <br>
-                    <li class=" logout" >
-                        <a    onclick="logout()"   href="">
+                    <li class=" logout">
+                        <a onclick="logout()" href="">
 
                             <span><i class="ri-logout-circle-line"></i>Signout</span>
 
                         </a>
-                        <form action="{{route ('logout') }}" id="logout" method="POST"> @csrf
+                        <form action="{{ route('logout') }}" id="logout" method="POST"> @csrf
 
                         </form>
                     </li>

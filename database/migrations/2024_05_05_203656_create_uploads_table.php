@@ -17,6 +17,8 @@ class CreateUploadsTable extends Migration
             $table->id();
             $table->string('image')->nullable();
             $table->string('title')->nullable();
+            $table->string('artist_name');
+            $table->double('art_price');
             $table->string('description')->nullable();
             $table->timestamps();
         });

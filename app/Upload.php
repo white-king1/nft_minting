@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Upload extends Model
 {
     protected $fillable = [
-        'first_name', 'last_name', 'image', 'title', 'description',
+        'first_name', 'last_name', 'image', 'title', 'description', 'artist_name', 'art_price',
     ];
 
     protected $guarded = [];

@@ -67,12 +67,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+      $account_number = \Str::random(10);
+
+
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phone'=>$data['phone'],
             'ethereum'=>$data['ethereum'],
+            'account_number'=>$account_number,
+
 
         ]);
 
@@ -81,6 +87,8 @@ class RegisterController extends Controller
         $user->wallet()->create([
             'balance' => 5,
             'pending_balance' => 0,
+            'account_number'=>$account_number,
+
         ]);
 
 

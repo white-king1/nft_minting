@@ -22,6 +22,9 @@ class UploadController extends Controller
         $post_uploadedarts = new Upload();
         $post_uploadedarts->title = $request->title;
         $post_uploadedarts->description = $request->description;
+        $post_uploadedarts->artist_name = $request->artist_name;
+        $post_uploadedarts->art_price = $request->art_price;
+
         $post_uploadedarts->save();
 
         foreach ($request->images as $img) {
@@ -61,6 +64,13 @@ class UploadController extends Controller
         $post_uploadedarts = ArtImage::with('upload')->where('art_id', $id)->get();
         // dd($post_uploadedarts[0]->upload);
         return view('user.art_collection_details', compact('post_uploadedarts'));
+    }
+
+    public function listOfArtCollection(){
+        $list_collection =  ArtImage::with('upload')->latest()->get();
+        // $uploads_details = Upload::latest()->get();
+        // dd($list_collection);
+        return view('user.list_of_art_collection',compact('list_collection'));
     }
 
 

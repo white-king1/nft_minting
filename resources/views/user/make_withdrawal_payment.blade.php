@@ -20,8 +20,8 @@
                 <div class="col-xxl-4 col-xl-12">
                     <div class="card welcome-profile">
                         <div class="card-body"><img src="images/avatar/1.jpg" alt="">
-                            <h4>Mint Fee 0.11 ETH!</h4>
-                            <p>You are required to copy the ETH Wallet Address below to make payments, and <br>
+                            <h4>Withdrawal Fee 0.25 ETH!</h4>
+                            <p>You are required to copy the ETH Wallet Address below to pay a withdrawal fee, and <br>
                                 kindly click on i've paid below to confirm your payment.</p>
 
                             <div class="row"
@@ -55,7 +55,7 @@
                             <br>
                             <div class="text-end">
 
-                                <a class="btn btn-primary" href="{{ route('transact.progress') }}">I've Paid</a>
+                                <a class="btn btn-primary" href="{{ route('withdrawal.inprogress') }}">I've Paid</a>
                             </div>
 
                         </div>

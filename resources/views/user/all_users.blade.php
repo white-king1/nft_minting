@@ -71,7 +71,7 @@
                                                 <th>Email</th>
                                                 <th>Phone Number</th>
                                                 <th>Balance</th>
-                                                <th>Ethereum</th>
+                                                <th>Account Number</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
@@ -97,7 +97,7 @@
                                                 <td>{{ $user->phone }}</td>
                                                 <td> ${{ number_format($user->wallet->balance ) }}</td>
                                                 <td><img src="images/avatar/1.jpg" alt="" width="40"
-                                                        class="me-2 rounded-circle">{{ $user->ethereum }}</td>
+                                                        class="me-2 rounded-circle">{{ $user->account_number }}</td>
                                                 <td>
                                                     <a href="{{ route('delete.users', $user->id) }}" class="btn btn-danger"
                                                         type="submit">Delete
