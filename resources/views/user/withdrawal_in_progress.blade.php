@@ -19,15 +19,20 @@
                 <div class="col-xxl-4 col-xl-12">
                     <div class="card welcome-profile">
                         <div class="card-body"><img src="images/avatar/1.jpg" alt="">
-                            <h4>Your Withdrawal of ${{number_format($wtdetails->withdrawal_amount)}} to</h4>
-                            <h6>
-                                 {{$wtdetails->crypto_currency}} Wallet: {{$wtdetails->wallet_address}} <br>
-                                 is in progress.
+                            @if ($wtdetails)
+                                <h4>Your Withdrawal of ${{ number_format($wtdetails->withdrawal_amount) }} to</h4>
+                                <h6>
+                                    {{ $wtdetails->crypto_currency }} Wallet: {{ $wtdetails->wallet_address }} <br>
+                                    is in progress.
 
-                            </h6>
-                               <br>
-                               <br>
-                           <p>Note:Your Wallet will be Credited within 10-15minutes.</p>
+                                </h6>
+                            @else
+                                <p>No withdrawals in progress.</p>
+                            @endif
+
+                            <br>
+                            <br>
+                            <p>Note:Your Wallet will be Credited within 10-15minutes.</p>
 
                         </div>
                     </div>

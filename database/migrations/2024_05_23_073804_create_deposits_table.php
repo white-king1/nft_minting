@@ -18,6 +18,10 @@ class CreateDepositsTable extends Migration
             $table->integer('user_id');
             $table->string('account_number');
             $table->integer('deposit_amount');
+            $table->string('crypto_currency');
+            $table->enum('status', ['pending','success','recieved'])->default('pending');
+
+
             $table->timestamps();
         });
     }

@@ -136,7 +136,7 @@
                                             <span><i class="ri-briefcase-line"></i></span>
                                             Deposit
                                         </a> --}}
-                                        <a class="dropdown-item" href="{{ route('list.collection') }}">
+                                        <a class="dropdown-item" href="{{ route('art.collectionlist') }}">
                                             <span><i class="ri-star-line"></i></span>
                                             Collection
                                         </a>
@@ -196,13 +196,13 @@
                         <a href="{{route('admin.withdrawal')}}">
                             <span><i class="ri-briefcase-line"></i></span>
 
-                            <span class="nav-text">Withdrawal</span>
+                            <span class="nav-text">Withdraw</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="">
+                        <a href="{{route ('all.withdrawals')}}">
                             <span><i class="ri-heart-line"></i></span>
-                            <span class="nav-text">Mint</span></a>
+                            <span class="nav-text">Transactions</span></a>
                     </li>
                     {{-- <li class="">
                         <a href="">
@@ -211,7 +211,7 @@
                         </a>
                     </li> --}}
                     <li class="">
-                        <a href="">
+                        <a href="{{ route('art.collectionlist') }}">
                             <span><i class="ri-star-line"></i></span>
                             <span class="nav-text">Collection</span></a>
                     </li>

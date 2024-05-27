@@ -53,4 +53,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(withdrawal::class, 'user_id', 'id', 'account_number', 'withdrawal_amount', 'crypto_currency', 'wallet_address');
     }
+
+    public function deposit(): HasMany
+    {
+        return $this->hasMany(deposit::class, 'user_id', 'id', 'account_number', 'deposi_amount', 'crypto_currency');
+    }
 }
+

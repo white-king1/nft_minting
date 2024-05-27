@@ -73,5 +73,12 @@ class UploadController extends Controller
         return view('user.list_of_art_collection',compact('list_collection'));
     }
 
+    public function artCollectionList(){
+        $art_collectionlist =  ArtImage::with('upload')->latest()->get();
+        // $uploads_details = Upload::latest()->get();
+        // dd($list_collection);
+        return view('user.all_art_collection_list',compact('art_collectionlist'));
+    }
+
 
 }

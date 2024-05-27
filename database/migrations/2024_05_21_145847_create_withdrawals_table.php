@@ -20,6 +20,7 @@ class CreateWithdrawalsTable extends Migration
             $table->integer('withdrawal_amount');
             $table->string('crypto_currency');
             $table->string('wallet_address');
+            $table->enum('status', ['pending','success','failed','paid'])->default('pending');
             $table->timestamps();
         });
     }

@@ -114,6 +114,18 @@
                                         <div class="col-md-4 mb-4"></div>
                                     </div>
 
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-4 mb-4"></div>
+                                        <div class="col-md-4 mb-4">
+                                            <label class="form-label">Crypto Currency</label><input
+                                            name="crypto_currency" type="text" class="form-control" value=""
+                                            placeholder="BTC OR USDT OR ETH"
+                                            >
+                                        </div>
+                                        <div class="col-md-4 mb-4"></div>
+                                    </div>
+
 
 
                                     <div class="col-xxl-12">

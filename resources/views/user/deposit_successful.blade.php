@@ -6,7 +6,7 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-6">
                         <div class="page-title-content">
-                            <h3>Withdrawal In Progress</h3>
+                            <h3>Deposit In Progress</h3>
                         </div>
                     </div>
                     <div class="col-auto">

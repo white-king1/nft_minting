@@ -53,6 +53,8 @@ Route::middleware(['auth'])->prefix('user')->group(function () {
     Route::post('/deposit_details', 'DepositController@depositDetails')->name('deposit.details');
     Route::get('/make_deposit_payment', 'DepositController@makeDepositPayment')->name('make.depositPayment');
     Route::get('/deposit_in_progress', 'DepositController@DepositSuccessful')->name('deposit.successful');
+    Route::post('/just_recieved_deposit/{id}', 'DepositController@justRecievedDeposit')->name('just.recieveddeposit');
+
 
 
 
@@ -72,8 +74,15 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/admin_withdrawal', 'WithdrawalController@adminWithdrawal')->name('admin.withdrawal');
     Route::post('/admin_withdrawal_details', 'WithdrawalController@adminwithdrawalDetails')->name('admin.withdrawaldetails');
     Route::get('/admin_withdrawal_successful', 'WithdrawalController@adminWithdrawalSuccessful')->name('admin.withdrawalsuccessful');
+    Route::get('/all_withdrawals', 'WithdrawalController@allWithdrawals')->name('all.withdrawals');
+    Route::get('/paid_withdrawals/{id}', 'WithdrawalController@paidWithdrawals')->name('paid.withdrawals');
+    Route::get('/recieved_deposit/{id}', 'WithdrawalController@recievedDeposit')->name('recieved.deposit');
+
+
 
     Route::get('/admin_wallet', 'WalletController@adminWallet')->name('admin.wallet');
+    Route::get('/all_arts_collection_list', 'UploadController@artCollectionList')->name('art.collectionlist');
+
 
 
 
