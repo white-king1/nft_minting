@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-auto">
                     <div class="breadcrumbs"><a href="{{ route('user.dashboard') }}">Home </a><span><i
-                                class="ri-arrow-right-s-line"></i></span><a href="#">Wallet</a></div>
+                                class="ri-arrow-right-s-line"></i></span><a href="{{ route('admin.wallet') }}">Wallet</a></div>
                 </div>
             </div>
         </div>
@@ -20,38 +20,38 @@
             <div class="col-xxl-6 col-xl-6 col-lg-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Balance Details</h4>
+                        <h1 class="card-title">Account Balance: ${{ number_format(Auth::user()->wallet->balance) }}</h1>
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-12">
+                            {{-- <div class="col-12">
                                 <div class="total-balance">
-                                    <p>Total Available Balance</p>
+                                    <p>Withdrawal Balance</p>
                                     <h2>${{ number_format(Auth::user()->wallet->balance) }}</h2>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <div class="balance-stats active">
-                                    <p>Last Month</p>
-                                    <h3>$42,678</h3>
+                                    <p>Available Balance</p>
+                                    <h3>${{ number_format(Auth::user()->wallet->balance) }}</h3>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <div class="balance-stats">
-                                    <p>Account Number</p>
-                                    <h3>{{ Auth::user()->account_number }}</h3>
+                                    <p>Available Withdrawal Amount</p>
+                                    <h3>${{ number_format(Auth::user()->wallet->balance) }}</h3>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <div class="balance-stats">
-                                    <p>Taxes</p>
-                                    <h3>$255.25</h3>
+                                    <p>Mint Fee</p>
+                                    <h3>0.11ETH</h3>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <div class="balance-stats">
-                                    <p>Debt</p>
-                                    <h3>$365,478</h3>
+                                    <p>Withdrawal Fee</p>
+                                    <h3>0.22ETH</h3>
                                 </div>
                             </div>
                         </div>
@@ -61,7 +61,7 @@
             <div class="col-xxl-6 col-xl-6 col-lg-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Latest Transaction</h4><a href="#">See More</a>
+                        <h4 class="card-title">Latest Activity</h4>
                     </div>
                     <div class="card-body bs-0 p-0 top-creators-content  bg-transparent">
                         <div class="d-flex justify-content-between creator-widget active  align-items-center">
@@ -70,11 +70,11 @@
                                         src="/assets_dashboard/images/items/item_1.html" alt=""
                                         width="60"></div>
                                 <div class="top-creators-info">
-                                    <h5 class="mb-0">Mint Fee</h5>
+                                    <h5 class="mb-0">Account Number</h5>
                                 </div>
                             </div>
                             <div class="text-end">
-                                <h5 class="text-primary">0.11 ETH</h5>
+                                <h5 class="text-primary">{{ Auth::user()->account_number }}</h5>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between creator-widget active  align-items-center">

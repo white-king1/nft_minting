@@ -46,12 +46,12 @@
                   <div class="banner__content" data-aos="fade-right" data-aos-duration="2000">
                       <h3>Our Mint is <span class="color--secondary-color">Live <i
                                   class="fa-solid fa-wifi"></i></span></h3>
-                      <h1>Bored <span class="color--theme-color">Ape <br> NFT</span> Collection</h1>
-                      <p>8,888 Unique Undercover Creatures, Starting Minting
+                      <h1>RainSea <span class="color--theme-color">Ape <br> NFT</span> Collection</h1>
+                      <p>8,888 Unique Undercover Creatures, Started Minting On
                           The 12th of February 2022</p>
                       <div class="btn-group">
-                          <a href="#" class="default-btn default-btn--secondary">Mint Now</a>
-                          <a href="#" class="default-btn">Whitelist Now</a>
+                          <a href="{{route('register')}}" class="default-btn default-btn--secondary">Mint Now</a>
+                          <a href="{{route('register')}}" class="default-btn">Whitelist Now</a>
                       </div>
                   </div>
               </div>
@@ -159,30 +159,26 @@
                   <div class="about__content" data-aos="fade-up" data-aos-duration="2000">
                       <p class="subtitle">The Story</p>
                       <h2>About us</h2>
-                      <p>Contrary to popular belieif Lorem Ipsum is not simply random text It has roots in
-                          in a piece of classical ratin literature from 45 BCS makinig it over 2000 years old
-                          Richard McClintock, a lratin professor at Hampden-Sydney College in Virginia ain
-                          looked up one of the more obscure Latin words, consectetur citeis of the word in
-                          awesome item classical literature.</p>
+                      <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                       Abode.</p>
 
                       <div class="mint-step">
                           <p class="subtitle color--secondary-color">Easy Steps</p>
                           <h3>How to Mint</h3>
-                          <p>Richard mclintock an Latin professor and hampden-sydney college in virginia and
-                              looked up one of the more obscure words consectetur cites of the word in</p>
+                          <p>Quickly click on Join Us to SignUp and access your dashboard to Mint your Arts at a little MintFee of 0.11ETH With 4 Easy steps</p>
                           <ul class="mint-step__list">
                               <li class="mint-step__list-item"><span class="color--secondary-color">1.</span>
-                                  connect Your Wallet</li>
+                                  Signup</li>
                               <li class="mint-step__list-item"><span class="color--secondary-color">2.</span>
-                                  Select Your Quantity</li>
+                                  Upload Your Art and set your price</li>
                               <li class="mint-step__list-item"><span class="color--theme-color">3.</span>
-                                  Confirm the transition</li>
+                                  Int by Paying a  MintFee</li>
                               <li class="mint-step__list-item"><span class="color--theme-color">4.</span>
-                                  Receive Your NFTs</li>
+                                  Get a Minted Art Link for your buyer</li>
                           </ul>
                           <div class="btn-group">
-                              <a href="#" class="default-btn default-btn--secondary">Mint Now</a>
-                              <a href="#" class="default-btn">Whitelist Now</a>
+                              <a href="{{route('register')}}" class="default-btn default-btn--secondary">Mint Now</a>
+                              <a href="{{route('register')}}" class="default-btn">Whitelist Now</a>
                           </div>
                       </div>
 
@@ -216,10 +212,8 @@
                                   <h4>Launched Initialized</h4>
                                   <p>10%</p>
                               </div>
-                              <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
-                                  info a piece of classical Latin literature
-                                  from 4BCS making it over 2000 years old looked upone of the more obscure latin
-                                  word consectetur cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                           </div>
                       </div>
                       <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
@@ -250,10 +244,8 @@
                                   <h4>Physical Merch</h4>
                                   <p>20%</p>
                               </div>
-                              <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
-                                  info a piece of classical Latin literature
-                                  from 4BCS making it over 2000 years old looked upone of the more obscure latin
-                                  word consectetur cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                           </div>
                       </div>
                       <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
@@ -283,10 +275,8 @@
                                   <h4>The Apes Land</h4>
                                   <p>50%</p>
                               </div>
-                              <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
-                                  info a piece of classical Latin literature
-                                  from 4BCS making it over 2000 years old looked upone of the more obscure latin
-                                  word consectetur cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                           </div>
                       </div>
                       <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
@@ -317,10 +307,8 @@
                                   <h4>Bored Apes Game</h4>
                                   <p>70%</p>
                               </div>
-                              <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
-                                  info a piece of classical Latin literature
-                                  from 4BCS making it over 2000 years old looked upone of the more obscure latin
-                                  word consectetur cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                           </div>
                       </div>
                       <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
@@ -350,10 +338,8 @@
                                   <h4>Launched Metaverse</h4>
                                   <p>80%</p>
                               </div>
-                              <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
-                                  info a piece of classical Latin literature
-                                  from 4BCS making it over 2000 years old looked upone of the more obscure latin
-                                  word consectetur cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                           </div>
                       </div>
                       <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
@@ -384,10 +370,8 @@
                                   <h4>Upcoming Dapps</h4>
                                   <p>100%</p>
                               </div>
-                              <p>Contrar to popular belief Lorem Ipsum is not simpy random text info has roots
-                                  info a piece of classical Latin literature
-                                  from 4BCS making it over 2000 years old looked upone of the more obscure latin
-                                  word consectetur cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                           </div>
                       </div>
                       <span class="svg-shape"><svg xmlns="http://www.w3.org/2000/svg"
@@ -428,8 +412,8 @@
                   <div class="collection__header">
                       <div class="collection__header-content">
                           <p class="subtitle">Collection</p>
-                          <h2>Bored apes NFT items</h2>
-                          <p>8888 Unique Undercover Creatues Start Minting</p>
+                          <h2>RainSea NFT items</h2>
+                          <p>8888 Unique Minting Undercover Creatues</p>
                       </div>
                   </div>
               </div>
@@ -486,9 +470,9 @@
               </div>
               <div class="col-lg-3">
                   <div class="collection__btn">
-                      <a href="#" class="default-btn default-btn--secondary"> <span><img
+                      <a href="{{route('register')}}" class="default-btn default-btn--secondary"> <span><img
                                   src="assets/images/opensea.svg" alt="opensea icon" width="24" height="24"> View
-                              On Opensea</span> </a>
+                              On RainSea</span> </a>
                   </div>
               </div>
           </div>
@@ -522,10 +506,8 @@
                                   <h4><a href="team-single.html">Harry Abraham</a> </h4>
                                   <p>Founder</p>
                               </div>
-                              <p>Contrar info popular belief is not simp
-                                  has roots info piece arei classica from
-                                  looked upone info the more obsc latin
-                                  cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                               <ul class="social">
                                   <li><a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
                                   </li>
@@ -569,10 +551,8 @@
                                   <h4><a href="team-single.html">Anne Haiwk</a> </h4>
                                   <p>Co Founder</p>
                               </div>
-                              <p>Contrar info popular belief is not simp
-                                  has roots info piece arei classica from
-                                  looked upone info the more obsc latin
-                                  cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                               <ul class="social">
                                   <li><a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
                                   </li>
@@ -616,10 +596,8 @@
                                   <h4><a href="team-single.html">Jebeca Rio</a> </h4>
                                   <p>Marketer</p>
                               </div>
-                              <p>Contrar info popular belief is not simp
-                                  has roots info piece arei classica from
-                                  looked upone info the more obsc latin
-                                  cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                               <ul class="social">
                                   <li><a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
                                   </li>
@@ -663,10 +641,8 @@
                                   <h4><a href="team-single.html">Anderson Leo</a> </h4>
                                   <p>Advisor</p>
                               </div>
-                              <p>Contrar info popular belief is not simp
-                                  has roots info piece arei classica from
-                                  looked upone info the more obsc latin
-                                  cites of the word in</p>
+                              <p>Contrary to popular believes Non Fungible Token (NFT MINTING) is here to stay and easy to perform from the comfort of your
+                                Abode.</p>
                               <ul class="social">
                                   <li><a href="#" class="social__link"><i class="fa-brands fa-twitter"></i></a>
                                   </li>
@@ -735,7 +711,7 @@
                                       <div class="accordion__body">
                                           We want provide our community with the best quality art from real artist
                                           for afordable price
-                                          That is why we chose mint price of 0.22 ETH (+ gas fee). If you are
+                                          That is why we chose mint price of 0.11 ETH (+ gas fee). If you are
                                           planning to hold your Bulls
                                           you will bee rewarded with FEE Apes Land approximatey 6-8 weeks after
                                           the official launch
@@ -759,7 +735,7 @@
                                       <div class="accordion__body">
                                           We want provide our community with the best quality art from real artist
                                           for afordable price
-                                          That is why we chose mint price of 0.22 ETH (+ gas fee). If you are
+                                          That is why we chose mint price of 0.11 ETH (+ gas fee). If you are
                                           planning to hold your Bulls
                                           you will bee rewarded with FEE Apes Land approximatey 6-8 weeks after
                                           the official launch
@@ -783,7 +759,7 @@
                                       <div class="accordion__body">
                                           We want provide our community with the best quality art from real artist
                                           for afordable price
-                                          That is why we chose mint price of 0.22 ETH (+ gas fee). If you are
+                                          That is why we chose mint price of 0.11 ETH (+ gas fee). If you are
                                           planning to hold your Bulls
                                           you will bee rewarded with FEE Apes Land approximatey 6-8 weeks after
                                           the official launch
@@ -814,7 +790,7 @@
                                       <div class="accordion__body">
                                           We want provide our community with the best quality art from real artist
                                           for afordable price
-                                          That is why we chose mint price of 0.22 ETH (+ gas fee). If you are
+                                          That is why we chose mint price of 0.11 ETH (+ gas fee). If you are
                                           planning to hold your Bulls
                                           you will bee rewarded with FEE Apes Land approximatey 6-8 weeks after
                                           the official launch
@@ -839,7 +815,7 @@
                                       <div class="accordion__body">
                                           We want provide our community with the best quality art from real artist
                                           for afordable price
-                                          That is why we chose mint price of 0.22 ETH (+ gas fee). If you are
+                                          That is why we chose mint price of 0.11 ETH (+ gas fee). If you are
                                           planning to hold your Bulls
                                           you will bee rewarded with FEE Apes Land approximatey 6-8 weeks after
                                           the official launch
@@ -864,7 +840,7 @@
                                       <div class="accordion__body">
                                           We want provide our community with the best quality art from real artist
                                           for afordable price
-                                          That is why we chose mint price of 0.22 ETH (+ gas fee). If you are
+                                          That is why we chose mint price of 0.11 ETH (+ gas fee). If you are
                                           planning to hold your Bulls
                                           you will bee rewarded with FEE Apes Land approximatey 6-8 weeks after
                                           the official launch
@@ -886,7 +862,7 @@
 
 
 <!-- ================Blog section start here <================== -->
-<section class="blog padding-top padding-bottom" style="background-image: url(assets/images/blog/bg.jpg);">
+{{-- <section class="blog padding-top padding-bottom" style="background-image: url(assets/images/blog/bg.jpg);">
   <div class="container">
       <div class="section-header text-center">
           <p class="subtitle">Latest Articles</p>
@@ -1018,7 +994,7 @@
           </div>
       </div>
   </div>
-</section>
+</section> --}}
 <!-- ================Blog section end here <================== -->
 
 
@@ -1106,8 +1082,8 @@
           <div class="btn-group justify-content-center">
               <a href="#" class="default-btn default-btn--secondary"><span><i class="fab fa-discord"></i> Join
                       Discord</span></a>
-              <a href="#" class="default-btn"> <span><img src="assets/images/opensea.svg" alt="opensea icon"
-                          width="20" height="20"> Join Opensea</span> </a>
+              <a href="{{route('register')}}" class="default-btn"> <span><img src="assets/images/opensea.svg" alt="opensea icon"
+                          width="20" height="20"> Join RainSea</span> </a>
           </div>
       </div>
   </div>

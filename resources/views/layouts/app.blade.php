@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NFTPort- NFT landing page HTML Template</title>
+    <title>RainSeaPort- RainSea landing page</title>
 
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
 
@@ -37,14 +37,14 @@
             <div class="container">
                 <div class="header-wrapper">
                     <div class="logo">
-                        <a href="index-2.html">
+                        <a href="{{route('welcome')}}">
                             <img src="assets/images/logo/logo.png" alt="logo">
                         </a>
                     </div>
                     <div class="menu-area">
                         <ul class="menu">
                             <li>
-                                <a href="#home">Home</a>
+                                <a href="{{route('welcome')}}">Home</a>
                             </li>
 
                             <li>
@@ -61,29 +61,28 @@
                                 <ul class="submenu">
                                     <li><a href="javsascript:void();">Home</a>
                                         <ul class="submenu">
-                                            <li><a href="index-2.html">Home 1</a></li>
-                                            <li><a href="index-3.html">Home 2</a></li>
+                                            <li><a href="{{route('welcome')}}">Home 1</a></li>
+                                            <li><a href="{{route('welcome')}}">Home 2</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="javsascript:void();">About</a>
                                         <ul class="submenu">
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="roadmap.html">Roadmap</a></li>
-                                            <li><a href="faq.html">FAQ</a></li>
-                                            <li><a href="team.html">Team</a></li>
-                                            <li><a href="team-single.html">Team Single</a></li>
+                                            <li><a href="">About</a></li>
+                                            <li><a href="">Roadmap</a></li>
+                                            <li><a href="">FAQ</a></li>
+                                            <li><a href="">Team</a></li>
+                                            <li><a href="">Team Single</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="javsascript:void();">Blog</a>
                                         <ul class="submenu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog-single.html">Blog single</a></li>
+                                            <li><a href="">Blog</a></li>
+                                            <li><a href="">Blog single</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="collection.html">Collection</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="404.html">404 Error</a></li>
-                                    <li><a href="coming-soon.html">Coming Soon</a></li>
+                                    <li><a href="">Collection</a></li>
+                                    <li><a href="{{route('contact.us')}}">Contact</a></li>
+
                                 </ul>
                             </li>
                         </ul>

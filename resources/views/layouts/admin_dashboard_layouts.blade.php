@@ -33,7 +33,7 @@
                     <div class="col-xxl-12">
                         <div class="header-content">
                             <div class="header-left">
-                                <div class="brand-logo"><a class="mini-logo" href="{{route ('user.dashboard')}}"><img
+                                <div class="brand-logo"><a class="mini-logo" href="{{ route('admin') }}"><img
                                             src="/assets_dashboard/images/logoi.png" alt="" width="40"></a>
                                 </div>
                                 <div class="search">
@@ -65,8 +65,9 @@
                                                 <div class="d-flex align-items-center"><span
                                                         class="me-3 icon success"><i class="ri-check-line"></i></span>
                                                     <div>
-                                                        <p>Account created successfully</p><span>2020-11-04
-                                                            12:00:23</span>
+                                                        <p>Account created successfully</p>
+                                                        <span>{{ Auth::user()->created_at }}</span>
+
                                                     </div>
                                                 </div>
                                             </a>
@@ -74,7 +75,7 @@
                                                 <div class="d-flex align-items-center"><span class="me-3 icon fail"><i
                                                             class="ri-close-line"></i></span>
                                                     <div>
-                                                        <p>2FA verification failed</p><span>2020-11-04 12:00:23</span>
+                                                        <p>2FA verification Not Successfull</p><span>{{ Auth::user()->created_at }}</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -82,8 +83,7 @@
                                                 <div class="d-flex align-items-center"><span
                                                         class="me-3 icon success"><i class="ri-check-line"></i></span>
                                                     <div>
-                                                        <p>Device confirmation completed</p><span>2020-11-04
-                                                            12:00:23</span>
+                                                        <p>Device confirmation completed</p><span>{{ Auth::user()->created_at }}</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -92,11 +92,10 @@
                                                         class="me-3 icon pending"><i
                                                             class="ri-question-mark"></i></span>
                                                     <div>
-                                                        <p>xs verification pending</p><span>2020-11-04 12:00:23</span>
+                                                        <p>Xs verification now still pending</p><span>{{ Auth::user()->created_at }}</span>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a href="#">More<i class="ri-arrow-right-s-line"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -115,45 +114,54 @@
                                                     <img src="/assets_dashboard/images/profile/3.png" alt="">
                                                 </span>
                                                 <div class="user-info">
-                                                    <h5>{{Auth::user()->name}}</h5>
+                                                    <h5>{{ Auth::user()->name }}</h5>
                                                     <span>{{ Auth::user()->email }}</span>
                                                 </div>
                                             </div>
                                         </div>
+                                        <a class="dropdown-item" href="{{ route('all.users') }}">
+                                            <span><i class="ri-layout-grid-fill"></i></span>
+                                            Users
+                                        </a>
 
                                         <a class="dropdown-item" href="{{ route('admin.wallet') }}">
                                             <span><i class="ri-wallet-line"></i></span>Wallet
                                         </a>
-                                        <a class="dropdown-item" href="{{ route('user.mint') }}">
-                                            <span><i class="ri-heart-line"></i></span>
-                                            Mint
-                                        </a>
-                                        <a class="dropdown-item" href="{{ route('make.withdrawal') }}">
+                                        <a class="dropdown-item" href="{{ route('make.transfer') }}">
                                             <span><i class="ri-briefcase-line"></i></span>
-                                            Withdrawal
+                                            Transfer
+                                        </a>
+                                        <a class="dropdown-item" href="{{ route('admin.withdrawal') }}">
+                                            <span><i class="ri-briefcase-line"></i></span>
+                                            Withdraw
                                         </a>
                                         {{-- <a class="dropdown-item" href="{{ route('make.deposit') }}">
                                             <span><i class="ri-briefcase-line"></i></span>
                                             Deposit
                                         </a> --}}
+                                        <a class="dropdown-item" href="{{ route('all.withdrawals') }}">
+                                            <span><i class="ri-heart-line"></i></span>
+                                            Transactions
+                                        </a>
                                         <a class="dropdown-item" href="{{ route('art.collectionlist') }}">
                                             <span><i class="ri-star-line"></i></span>
                                             Collection
                                         </a>
-                                        <a class="dropdown-item" href="profile.html">
+                                        {{-- <a class="dropdown-item" href="profile.html">
                                             <span><i class="ri-user-line"></i></span>Profile
-                                        </a>
-                                        <a class="dropdown-item" href="settings-profile.html">
+                                        </a> --}}
+                                        {{-- <a class="dropdown-item" href="settings-profile.html">
                                             <span><i class="ri-settings-3-line"></i></span>Settings
-                                        </a>
+                                        </a> --}}
 
                                         {{-- <a class="dropdown-item" href="{{route('login')}}">
                                             <span><i class="ri-lock-line"></i></span>Lock
                                         </a> --}}
 
-                                        <a class="dropdown-item logout" onclick="logout()" href="">
-                                            <button class="btn btn-primary px-3">
-                                                <i class="ri-logout-circle-line"></i>Logout
+                                        <a class="dropdown-item logout" onclick="logout()" href=""
+                                            style="color: #dc3545;">
+                                            <button class="btn  px-3" style="color: #dc3545; backgroun-color: #fff">
+                                                <i class="ri-logout-circle-line" style="color: #dc3545;"></i>Logout
                                             </button>
 
                                         </a>
@@ -169,7 +177,7 @@
             </div>
         </div>
         <div class="sidebar">
-            <div class="brand-logo"><a class="full-logo" href="{{ route('user.dashboard') }}"><img
+            <div class="brand-logo"><a class="full-logo" href="{{ route('admin') }}"><img
                         src="/assets_dashboard/images/logoi.png" alt="" width="30"></a></div>
             <div class="menu">
                 <ul>
@@ -185,7 +193,7 @@
                             <span class="nav-text">Wallet</span></a>
                     </li>
                     <li class="">
-                        <a href="{{route ('make.transfer')}}">
+                        <a href="{{ route('make.transfer') }}">
                             <span><i class="ri-briefcase-line"></i></span>
 
                             <span class="nav-text">Transfer</span>
@@ -193,14 +201,14 @@
                     </li>
 
                     <li class="">
-                        <a href="{{route('admin.withdrawal')}}">
+                        <a href="{{ route('admin.withdrawal') }}">
                             <span><i class="ri-briefcase-line"></i></span>
 
                             <span class="nav-text">Withdraw</span>
                         </a>
                     </li>
                     <li class="">
-                        <a href="{{route ('all.withdrawals')}}">
+                        <a href="{{ route('all.withdrawals') }}">
                             <span><i class="ri-heart-line"></i></span>
                             <span class="nav-text">Transactions</span></a>
                     </li>
@@ -216,22 +224,25 @@
                             <span class="nav-text">Collection</span></a>
                     </li>
 
-                    <li class="">
+                    {{-- <li class="">
                         <a href="">
                             <span><i class="ri-account-box-line"></i></span>
                             <span class="nav-text">Profile</span></a>
-                    </li>
-                    <li class="" style="margin-bottom: 20px;">
+                    </li> --}}
+                    {{-- <li class="" style="margin-bottom: 20px;">
                         <a href="">
                             <span><i class="ri-settings-3-line"></i></span>
                             <span class="nav-text">Settings</span></a>
                     </li>
                     <br>
-                    <br>
+                    <br> --}}
                     <li class=" logout">
-                        <a onclick="logout()" href="">
+                        <a onclick="logout()" href="" style="color: #dc3545;">
 
-                            <span><i class="ri-logout-circle-line"></i>Signout</span>
+                            <span style="color: #dc3545;">
+                                <i class="ri-logout-circle-line" style="color: #dc3545;"></i>
+                                Signout
+                            </span>
 
                         </a>
                         <form action="{{ route('logout') }}" id="logout" method="POST"> @csrf

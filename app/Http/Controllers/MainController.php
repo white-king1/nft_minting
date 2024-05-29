@@ -10,4 +10,9 @@ class MainController extends Controller
     {
        return view('welcome');
     }
+
+    public function contactUs()
+    {
+        return view('contact_us');
+    }
 }

@@ -140,12 +140,12 @@
                                             <span><i class="ri-star-line"></i></span>
                                             Collection
                                         </a>
-                                        <a class="dropdown-item" href="profile.html">
+                                        {{-- <a class="dropdown-item" href="profile.html">
                                             <span><i class="ri-user-line"></i></span>Profile
-                                        </a>
-                                        <a class="dropdown-item" href="settings-profile.html">
+                                        </a> --}}
+                                        {{-- <a class="dropdown-item" href="settings-profile.html">
                                             <span><i class="ri-settings-3-line"></i></span>Settings
-                                        </a>
+                                        </a> --}}
 
                                         {{-- <a class="dropdown-item" href="{{route('login')}}">
                                             <span><i class="ri-lock-line"></i></span>Lock
@@ -208,18 +208,18 @@
                             <span class="nav-text">Collection</span></a>
                     </li>
 
-                    <li class="">
+                    {{-- <li class="">
                         <a href="profile.html">
                             <span><i class="ri-account-box-line"></i></span>
                             <span class="nav-text">Profile</span></a>
-                    </li>
-                    <li class="" style="margin-bottom: 20px;">
+                    </li> --}}
+                    {{-- <li class="" style="margin-bottom: 20px;">
                         <a href="settings-profile.html">
                             <span><i class="ri-settings-3-line"></i></span>
                             <span class="nav-text">Settings</span></a>
                     </li>
                     <br>
-                    <br>
+                    <br> --}}
                     <li class=" logout">
                         <a onclick="logout()" href="">
 

@@ -7,12 +7,12 @@
                     <div class="col-6">
                         <div class="page-title-content">
                             <h3>ALL USERS</h3>
-                            <p class="mb-2">ALL USERS DETAILS</p>
+                            <p class="mb-2">ACCOUNT DETAILS</p>
                         </div>
                     </div>
                     <div class="col-auto">
-                        <div class="breadcrumbs"><a href="#">All </a><span><i
-                                    class="ri-arrow-right-s-line"></i></span><a href="#">Users</a></div>
+                        <div class="breadcrumbs"><a href="{{ route('admin') }}">Home </a><span><i
+                                    class="ri-arrow-right-s-line"></i></span><a href="{{ route('all.users') }}">All Users</a></div>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                     <div class="stat-widget d-flex align-items-center">
                         <div class="widget-icon me-3 bg-primary"><span><i class="ri-file-copy-2-line"></i></span></div>
                         <div class="widget-content">
-                            <h3>24K</h3>
+                            <h3>{{$usercount}}</h3>
                             <p>Total Number Users</p>
                         </div>
                     </div>
@@ -30,8 +30,8 @@
                     <div class="stat-widget d-flex align-items-center">
                         <div class="widget-icon me-3 bg-success"><span><i class="ri-file-list-3-line"></i></span></div>
                         <div class="widget-content">
-                            <h3>82K</h3>
-                            <p>Auction</p>
+                            <h3>{{$artCount}}</h3>
+                            <p>Minted Arts</p>
                         </div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                     <div class="stat-widget d-flex align-items-center">
                         <div class="widget-icon me-3 bg-warning"><span><i class="ri-file-paper-line"></i></span></div>
                         <div class="widget-content">
-                            <h3>200</h3>
+                            <h3>{{$usercount}}</h3>
                             <p>Creators</p>
                         </div>
                     </div>
@@ -55,7 +55,6 @@
                 </div>
                 <div class="col-xl-12">
                     <div class="card">
-                            <a class="btn btn-primary" href="create-invoice.html">Place a Bid</a>
 
                         <div class="card-body p-0 bs-0 bg-transparent">
                             <div class="bid-table">

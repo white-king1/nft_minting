@@ -23,6 +23,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'MainController@index' )->name('welcome');
+Route::get('/contact_us', 'MainController@contactUs' )->name('contact.us');
+
 
 // ADMIN MIDDLEWARE AUTHENTICATION ACCESS ROUTE
 Route::middleware(['auth'])->prefix('admin')->group(function () {

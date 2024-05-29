@@ -14,7 +14,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!---- Website Information ---->
-        <title>ENFTX - NFT Dashboard HTML Template</title>
+        <title>RainSea - RainSea NFT Dashboard </title>
         <meta name="description"
             content="ENFTX is the complete UX & UI dashboard for NFT. Here included bids, collection, wallet, and all user setting pages including profile, application, activity, payment method, api, sign in & sign up etc.">
 
@@ -34,7 +34,7 @@
                     <div class="col-xl-8 col-md-8">
                         <div class="mini-logo text-center my-4"><a href="index.html"><img src="images/logo.png"
                                     alt=""></a>
-                            <h4 class="card-title mt-5">Sign up to ENFTX</h4>
+                            <h4 class="card-title mt-5">Sign up to RainSea NFT</h4>
                         </div>
                         <div class="auth-form card">
                             <div class="card-body">

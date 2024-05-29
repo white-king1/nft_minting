@@ -32,7 +32,7 @@
         <div class="row justify-content-center h-100 align-items-center">
             <div class="col-xl-8 col-md-8">
                 <div class="mini-logo text-center my-4"><a href="index.html"><img src="images/logo.png" alt=""></a>
-                    <h4 class="card-title mt-5">Sign in to ENFTX</h4>
+                    <h4 class="card-title mt-5">Sign in to  RainSea NFT</h4>
                 </div>
                 <div class="auth-form card">
                     <div class="card-body">
