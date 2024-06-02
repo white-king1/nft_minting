@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!---- Website Information ---->
-    <title>ENFTX - NFT Dashboard HTML Template</title>
+    <title>Wallet Page</title>
     <meta name="description"
         content="ENFTX is the complete UX & UI dashboard for NFT. Here included bids, collection, wallet, and all user setting pages including profile, application, activity, payment method, api, sign in & sign up etc.">
 
@@ -33,7 +33,7 @@
                     <div class="col-xxl-12">
                         <div class="header-content">
                             <div class="header-left">
-                                <div class="brand-logo"><a class="mini-logo" href="index-2.html"><img
+                                <div class="brand-logo"><a class="mini-logo" href="{{ route('user.dashboard') }}"><img
                                             src="/assets_dashboard/images/logoi.png" alt="" width="40"></a>
                                 </div>
                                 <div class="search">
@@ -61,42 +61,41 @@
                                         class="dropdown-menu notification-list dropdown-menu dropdown-menu-right">
                                         <h4>Recent Notification</h4>
                                         <div class="lists">
-                                            <a class="" href="index-2.html#">
+                                            <a class="" href="#">
                                                 <div class="d-flex align-items-center"><span
                                                         class="me-3 icon success"><i class="ri-check-line"></i></span>
                                                     <div>
-                                                        <p>Account created successfully</p><span>2020-11-04
-                                                            12:00:23</span>
+                                                        <p>Account created successfully</p>
+                                                        <span>{{ Auth::user()->created_at }}</span>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a class="" href="index-2.html#">
+                                            <a class="" href="#">
                                                 <div class="d-flex align-items-center"><span class="me-3 icon fail"><i
                                                             class="ri-close-line"></i></span>
                                                     <div>
-                                                        <p>2FA verification failed</p><span>2020-11-04 12:00:23</span>
-                                                    </div>
+                                                        <p>2FA verification Not Successfull</p>
+                                                        <span>{{ Auth::user()->created_at }}</span>                                                    </div>
                                                 </div>
                                             </a>
-                                            <a class="" href="index-2.html#">
+                                            <a class="" href="#">
                                                 <div class="d-flex align-items-center"><span
                                                         class="me-3 icon success"><i class="ri-check-line"></i></span>
                                                     <div>
-                                                        <p>Device confirmation completed</p><span>2020-11-04
-                                                            12:00:23</span>
+                                                        <p>Device confirmation completed</p>
+                                                        <span>{{ Auth::user()->created_at }}</span>
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a class="" href="index-2.html#">
+                                            <a class="" href="#">
                                                 <div class="d-flex align-items-center"><span
                                                         class="me-3 icon pending"><i
                                                             class="ri-question-mark"></i></span>
                                                     <div>
-                                                        <p>xs verification pending</p><span>2020-11-04 12:00:23</span>
-                                                    </div>
+                                                        <p>Xs verification..... is still pending</p>
+                                                        <span>{{ Auth::user()->created_at }}</span>                                                    </div>
                                                 </div>
                                             </a>
-                                            <a href="#">More<i class="ri-arrow-right-s-line"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -140,20 +139,19 @@
                                             <span><i class="ri-star-line"></i></span>
                                             Collection
                                         </a>
-                                        <a class="dropdown-item" href="profile.html">
+                                        {{-- <a class="dropdown-item" href="profile.html">
                                             <span><i class="ri-user-line"></i></span>Profile
                                         </a>
                                         <a class="dropdown-item" href="settings-profile.html">
                                             <span><i class="ri-settings-3-line"></i></span>Settings
-                                        </a>
-
-                                        {{-- <a class="dropdown-item" href="{{route('login')}}">
-                                            <span><i class="ri-lock-line"></i></span>Lock
                                         </a> --}}
 
-                                        <a class="dropdown-item logout" onclick="logout()" href="">
-                                            <button class="btn btn-primary px-3">
-                                                <i class="ri-logout-circle-line"></i>Logout
+
+
+                                        <a class="dropdown-item logout" onclick="logout()" href=""
+                                            style="color: #dc3545;">
+                                            <button class="btn  px-3" style="color: #dc3545; backgroun-color: #fff">
+                                                <i class="ri-logout-circle-line" style="color: #dc3545;"></i>Logout
                                             </button>
 
                                         </a>
@@ -173,12 +171,7 @@
                         src="/assets_dashboard/images/logoi.png" alt="" width="30"></a></div>
             <div class="menu">
                 <ul>
-                    {{-- <li>
-                        <a href="{{ route('user.dashboard') }}">
-                            <span><i class="ri-layout-grid-fill"></i></span>
-                            <span class="nav-text">Dashboard</span>
-                        </a>
-                    </li> --}}
+
                     <li class="">
                         <a href="{{ route('user.wallet') }}">
                             <span><i class="ri-wallet-line"></i></span>
@@ -208,7 +201,7 @@
                             <span class="nav-text">Collection</span></a>
                     </li>
 
-                    <li class="">
+                    {{-- <li class="">
                         <a href="profile.html">
                             <span><i class="ri-account-box-line"></i></span>
                             <span class="nav-text">Profile</span></a>
@@ -219,7 +212,7 @@
                             <span class="nav-text">Settings</span></a>
                     </li>
                     <br>
-                    <br>
+                    <br> --}}
                     <li class=" logout">
                         <a onclick="logout()" href="">
 
@@ -241,12 +234,11 @@
                         <div class="col-6">
                             <div class="page-title-content">
                                 <h3>Wallet</h3>
-                                <p class="mb-2">Welcome ENFTX Wallet page</p>
                             </div>
                         </div>
                         <div class="col-auto">
                             <div class="breadcrumbs"><a href="{{ route('user.dashboard') }}">Home </a><span><i
-                                        class="ri-arrow-right-s-line"></i></span><a href="#">Wallet</a></div>
+                                        class="ri-arrow-right-s-line"></i></span><a href="{{ route('user.wallet') }}">Wallet</a></div>
                         </div>
                     </div>
                 </div>
@@ -254,38 +246,38 @@
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Balance Details</h4>
+                                <h1 class="card-title">Account Balance: ${{ number_format(Auth::user()->wallet->balance) }}</h1>
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-12">
+                                    {{-- <div class="col-12">
                                         <div class="total-balance">
-                                            <p>Total Available Balance</p>
+                                            <p>Withdrawal Balance</p>
                                             <h2>${{ number_format(Auth::user()->wallet->balance) }}</h2>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <div class="balance-stats active">
-                                            <p>Last Month</p>
-                                            <h3>$42,678</h3>
+                                            <p style="color: #111">Available Balance</p>
+                                            <h3>${{ number_format(Auth::user()->wallet->balance) }}</h3>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <div class="balance-stats">
-                                            <p>Account Number</p>
-                                            <h3>{{ Auth::user()->account_number }}</h3>
+                                            <p>Available Withdrawal Amount</p>
+                                            <h3>${{ number_format(Auth::user()->wallet->balance) }}</h3>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <div class="balance-stats">
-                                            <p>Taxes</p>
-                                            <h3>$255.25</h3>
+                                            <p>Mint Fee</p>
+                                            <h3>0.11ETH</h3>
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                         <div class="balance-stats">
-                                            <p>Debt</p>
-                                            <h3>$365,478</h3>
+                                            <p>Withdrawal Fee</p>
+                                            <h3>0.22ETH</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -295,7 +287,7 @@
                     <div class="col-xxl-6 col-xl-6 col-lg-6">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Latest Transaction</h4><a href="#">See More</a>
+                                <h4 class="card-title">Latest Activity</h4>
                             </div>
                             <div class="card-body bs-0 p-0 top-creators-content  bg-transparent">
                                 <div class="d-flex justify-content-between creator-widget active  align-items-center">
@@ -304,11 +296,11 @@
                                                 src="/assets_dashboard/images/items/item_1.html" alt=""
                                                 width="60"></div>
                                         <div class="top-creators-info">
-                                            <h5 class="mb-0">Mint Fee</h5>
+                                            <h5 class="mb-0">Account Number</h5>
                                         </div>
                                     </div>
                                     <div class="text-end">
-                                        <h5 class="text-primary">0.11 ETH</h5>
+                                        <h5 class="text-primary">{{ Auth::user()->account_number }}</h5>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between creator-widget active  align-items-center">

@@ -1,6 +1,6 @@
 @extends('layouts.admin_dashboard_layouts')
 @section('content')
-    <div class="content-body">
+    <div class="content-body" style="margin-top:-20px;">
         <div class="container">
             <div class="page-title">
                 <div class="row align-items-center justify-content-between">
@@ -10,42 +10,24 @@
                         </div>
                     </div>
                     <div class="col-auto">
-                        <div class="breadcrumbs"><a href="#">Transfer </a><span><i
-                                    class="ri-arrow-right-s-line"></i></span><a href="#">Page</a></div>
+                        <div class="breadcrumbs"><a href="{{ route('admin') }}">Home </a><span><i
+                                    class="ri-arrow-right-s-line"></i></span><a href="{{ route('make.transfer') }}">Transfer</a></div>
                     </div>
                 </div>
             </div>
 
-            <div class="row" style="margin-top:-30px;">
-                <div class="col-md-12">
-                    <div class="card">
-                        <div class="card-body">
+            <div class="row">
+                <div class="container">
+
                             <form method="post" action="{{ route('transfer.details') }}">
                                 @csrf
-                                <div class="container">
-                                    <div class="column ">
-                                        <div class="row">
-                                            <div class="card-body col-md-2 ml-2"></div>
-                                            <div class="card-body col-md-8 ml-8">
-                                                <center style="border-radius: 10px;border-colo:yellow;">
-                                                    <img src="/assets_dashboard/images/items/withdrawnow.png" alt=""
-                                                        width="300">
-                                                </center>
-                                                <center>
-                                                    <div class="panel-body" style="color: black;">
+                                <div class="col-md-4"></div>
+                                <div class="container col-md-4 ">
+                                    <img src="/assets_dashboard/images/items/withdrawnow.png" alt=""
+                                                         style="margin-top:-20px; margin-left:-50px; height:400px; border-radius:10px;">
 
-
-                                                    </div>
-                                                </center>
-
-                                            </div>
-                                            <div class="card-body col-md-2 ml-2"></div>
-
-
-                                        </div>
-
-                                    </div>
                                 </div>
+                                <div class="col-md-4"></div>
                                 <div class="row">
                                     <div class="col-md-4 mb-4">
 
@@ -77,8 +59,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

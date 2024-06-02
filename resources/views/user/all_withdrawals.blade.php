@@ -6,13 +6,12 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-6">
                         <div class="page-title-content">
-                            <h3>List Of All Transactionss</h3>
-                            <p class="mb-2">Welcome To ENFTX All Transactions Page</p>
+                            <h3>Transactions</h3>
                         </div>
                     </div>
                     <div class="col-auto">
                         <div class="breadcrumbs"><a href="{{ route('admin') }}">Home </a><span><i
-                                    class="ri-arrow-right-s-line"></i></span><a href="#">All Transactions</a></div>
+                                    class="ri-arrow-right-s-line"></i></span><a href="{{route('all.withdrawals')}}">Transactions</a></div>
                     </div>
                 </div>
             </div>

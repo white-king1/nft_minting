@@ -61,7 +61,7 @@
                                         class="dropdown-menu notification-list dropdown-menu dropdown-menu-right">
                                         <h4>Recent Notification</h4>
                                         <div class="lists">
-                                            <a class="" href="index-2.html#">
+                                            <a class="" href="#">
                                                 <div class="d-flex align-items-center"><span
                                                         class="me-3 icon success"><i class="ri-check-line"></i></span>
                                                     <div>
@@ -71,7 +71,7 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a class="" href="index-2.html#">
+                                            <a class="" href="#">
                                                 <div class="d-flex align-items-center"><span class="me-3 icon fail"><i
                                                             class="ri-close-line"></i></span>
                                                     <div>
@@ -79,7 +79,7 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a class="" href="index-2.html#">
+                                            <a class="" href="#">
                                                 <div class="d-flex align-items-center"><span
                                                         class="me-3 icon success"><i class="ri-check-line"></i></span>
                                                     <div>
@@ -87,12 +87,12 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                            <a class="" href="index-2.html#">
+                                            <a class="" href="#">
                                                 <div class="d-flex align-items-center"><span
                                                         class="me-3 icon pending"><i
                                                             class="ri-question-mark"></i></span>
                                                     <div>
-                                                        <p>Xs verification now still pending</p><span>{{ Auth::user()->created_at }}</span>
+                                                        <p>Xs verification..... is still pending</p><span>{{ Auth::user()->created_at }}</span>
                                                     </div>
                                                 </div>
                                             </a>
@@ -147,16 +147,7 @@
                                             <span><i class="ri-star-line"></i></span>
                                             Collection
                                         </a>
-                                        {{-- <a class="dropdown-item" href="profile.html">
-                                            <span><i class="ri-user-line"></i></span>Profile
-                                        </a> --}}
-                                        {{-- <a class="dropdown-item" href="settings-profile.html">
-                                            <span><i class="ri-settings-3-line"></i></span>Settings
-                                        </a> --}}
-
-                                        {{-- <a class="dropdown-item" href="{{route('login')}}">
-                                            <span><i class="ri-lock-line"></i></span>Lock
-                                        </a> --}}
+                                       
 
                                         <a class="dropdown-item logout" onclick="logout()" href=""
                                             style="color: #dc3545;">
@@ -212,30 +203,14 @@
                             <span><i class="ri-heart-line"></i></span>
                             <span class="nav-text">Transactions</span></a>
                     </li>
-                    {{-- <li class="">
-                        <a href="">
-                            <span><i class="ri-briefcase-line"></i></span>
-                            <span class="nav-text">Deposit</span>
-                        </a>
-                    </li> --}}
+
                     <li class="">
                         <a href="{{ route('art.collectionlist') }}">
                             <span><i class="ri-star-line"></i></span>
                             <span class="nav-text">Collection</span></a>
                     </li>
 
-                    {{-- <li class="">
-                        <a href="">
-                            <span><i class="ri-account-box-line"></i></span>
-                            <span class="nav-text">Profile</span></a>
-                    </li> --}}
-                    {{-- <li class="" style="margin-bottom: 20px;">
-                        <a href="">
-                            <span><i class="ri-settings-3-line"></i></span>
-                            <span class="nav-text">Settings</span></a>
-                    </li>
-                    <br>
-                    <br> --}}
+
                     <li class=" logout">
                         <a onclick="logout()" href="" style="color: #dc3545;">
 

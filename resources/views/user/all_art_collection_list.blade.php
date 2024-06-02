@@ -6,20 +6,19 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-6">
                         <div class="page-title-content">
-                            <h3>All Arts Collection List</h3>
-                            <p class="mb-2">Welcome ENFTX Collections page</p>
+                            <h3>Minted Arts</h3>
                         </div>
                     </div>
                     <div class="col-auto">
-                        <div class="breadcrumbs"><a href="#">NFT </a><span><i
-                                    class="ri-arrow-right-s-line"></i></span><a href="#">Collections</a></div>
+                        <div class="breadcrumbs"><a href="{{route('admin')}}">Home </a><span><i
+                                    class="ri-arrow-right-s-line"></i></span><a href="{{route('art.collectionlist')}}">Minted Arts</a></div>
                     </div>
                 </div>
             </div>
             <div class="col-12">
                 <div class="card filter-tab">
                     <div class="card-header">
-                        <div class="filter-nav"><a class="active">Artwork</a><a>Games</a><a>Others</a></div>
+                        <div class="filter-nav"><a class="active">Minted Arts</a><a>Games</a><a>Others</a></div>
                     </div>
                     <div class="card-body bs-0 p-0 bg-transparent">
                         <div class="row">
@@ -57,7 +56,7 @@
                                                         <p>Url:</p>
                                                     </div>
                                                     <div class="col-md-6"
-                                                        style="margin-left:-60px !important; margin-top:20px;">
+                                                        style="margin-top:20px;">
                                                         <a href="">
                                                             <p id="text" style="color: #00ffa3">@auth
                                                                     {{-- env('APP_URL'). '/user/upload_arts/'.$post_uploadedarts[0]->upload->id --}}

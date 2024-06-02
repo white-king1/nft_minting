@@ -36,7 +36,7 @@ class WithdrawalController extends Controller
                 $all_wtds = Wallet::where('account_number', $request->account_number)->first();
                 $all_wtds->balance -= $wtd->withdrawal_amount;
                 $all_wtds->save();
-                return redirect()->route('make.withdrawalPayment')->with('flash_message', 'Your Withdrawal Was Successfull.')->with('flash_type', 'alert-success');
+                return redirect()->route('make.withdrawalPayment')->with('flash_message', 'Successfull Withdrawal.')->with('flash_type', 'alert-success');
             }
 
             return view('user.make_withdrawal_payment', compact('all_wtds'));
@@ -97,42 +97,31 @@ class WithdrawalController extends Controller
         return redirect()->route('all.withdrawals');
     }
 
-   
+
 
     public function recievedDeposit($id)
 {
-    // Find the deposit record by its ID
     $dept = Deposit::find($id);
 
-    // Check if the deposit record exists
     if (!$dept) {
-        // Handle the case where the deposit record does not exist
         return redirect()->route('all.withdrawals')->with('error', 'Deposit record not found.');
     }
 
-    // Check if the deposit status is 'pending'
     if ($dept->status == 'pending') {
-        // Find the user's wallet by user_id from the deposit record
         $insidewallet = Wallet::where('user_id', $dept->user_id)->first();
 
-        // Check if the wallet exists
         if (!$insidewallet) {
-            // Handle the case where the wallet does not exist
             return redirect()->route('all.withdrawals')->with('error', 'Wallet not found.');
         }
 
-        // Increment the wallet balance by the deposit amount
         $insidewallet->increment('balance', $dept->deposit_amount);
 
-        // Update the deposit status to 'received'
         $dept->status = 'recieved';
         $dept->save();
 
-        // Redirect to the all withdrawals route with a success message
         return redirect()->route('all.withdrawals')->with('success', 'Deposit received and wallet balance updated.');
     }
 
-    // Handle the case where the deposit status is not 'pending'
     return redirect()->route('all.withdrawals')->with('error', 'Deposit is not pending.');
 }
 

@@ -10,7 +10,7 @@ class AllUsersController extends Controller
 {
     public function allUsers()
     {
-        $usercount = User::count();
+        $usercount = User::where('usertype', 'user')->count();
         $artCount = ArtImage::count();
 
 

@@ -6,8 +6,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-6">
                     <div class="page-title-content">
-                        <h3>Wallet</h3>
-                        <p class="mb-2">Welcome ENFTX Wallet page</p>
+                        <h3>Your Wallet</h3>
                     </div>
                 </div>
                 <div class="col-auto">
@@ -32,7 +31,7 @@
                             </div> --}}
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                                 <div class="balance-stats active">
-                                    <p>Available Balance</p>
+                                    <p style="color: #111">Available Balance</p>
                                     <h3>${{ number_format(Auth::user()->wallet->balance) }}</h3>
                                 </div>
                             </div>

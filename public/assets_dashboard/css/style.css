@@ -717,6 +717,8 @@ progress {
     margin-left: auto;
 }
 
+
+
 @media (min-width: 1400px) {
 
     .container,
@@ -728,6 +730,17 @@ progress {
         max-width: 1500px;
     }
 }
+
+/* @media (min-width: 768px){
+    .make_transfer{
+        padding: 0;
+    }
+
+    img.image_transfer{
+        margin-left:-30px;
+    }
+
+} */
 
 .row {
     --bs-gutter-x: 40px;

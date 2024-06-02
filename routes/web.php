@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MintController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,7 +28,7 @@ Route::get('/contact_us', 'MainController@contactUs' )->name('contact.us');
 
 
 // ADMIN MIDDLEWARE AUTHENTICATION ACCESS ROUTE
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+Route::middleware(['auth'])->prefix('master_admin')->group(function () {
 
 });
 

@@ -59,13 +59,13 @@
                             <li>
                                 <a href="#0">Pages</a>
                                 <ul class="submenu">
-                                    <li><a href="javsascript:void();">Home</a>
+                                    {{-- <li><a href="javsascript:void();">Home</a>
                                         <ul class="submenu">
                                             <li><a href="{{route('welcome')}}">Home 1</a></li>
                                             <li><a href="{{route('welcome')}}">Home 2</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="javsascript:void();">About</a>
+                                    </li> --}}
+                                    {{-- <li><a href="javsascript:void();">About</a>
                                         <ul class="submenu">
                                             <li><a href="">About</a></li>
                                             <li><a href="">Roadmap</a></li>
@@ -73,13 +73,13 @@
                                             <li><a href="">Team</a></li>
                                             <li><a href="">Team Single</a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="javsascript:void();">Blog</a>
+                                    </li> --}}
+                                    {{-- <li><a href="javsascript:void();">Blog</a>
                                         <ul class="submenu">
                                             <li><a href="">Blog</a></li>
                                             <li><a href="">Blog single</a></li>
                                         </ul>
-                                    </li>
+                                    </li> --}}
                                     <li><a href="">Collection</a></li>
                                     <li><a href="{{route('contact.us')}}">Contact</a></li>
 
@@ -87,12 +87,13 @@
                             </li>
                         </ul>
                         <div class="header-btn">
+                            <a href="{{route ('login')}}" class="default-btn" data-bs-toggle="modal" data-bs-target="#wallet-option">
+                                <span>Connect <i class="fa-solid fa-wallet"></i></span>
+                            </a>
                             <a href="{{route ('register')}}" class="default-btn default-btn--secondary">
                                 <span>Join <i class="fa-brands fa-discord"></i></span>
                             </a>
-                            <a href="#" class="default-btn" data-bs-toggle="modal" data-bs-target="#wallet-option">
-                                <span>Connect <i class="fa-solid fa-wallet"></i></span>
-                            </a>
+
                         </div>
 
                         <!-- toggle icons -->

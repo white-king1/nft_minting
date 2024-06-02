@@ -22,7 +22,7 @@
                         <div class="widget-icon me-3 bg-primary"><span><i class="ri-file-copy-2-line"></i></span></div>
                         <div class="widget-content">
                             <h3>{{$usercount}}</h3>
-                            <p>Total Number Users</p>
+                            <p>Total Users</p>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         <div class="widget-icon me-3 bg-warning"><span><i class="ri-file-paper-line"></i></span></div>
                         <div class="widget-content">
                             <h3>{{$usercount}}</h3>
-                            <p>Creators</p>
+                            <p> Creators</p>
                         </div>
                     </div>
                 </div>

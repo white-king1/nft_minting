@@ -6,20 +6,19 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-6">
                         <div class="page-title-content">
-                            <h3>Collections</h3>
-                            <p class="mb-2">Welcome ENFTX Collections page</p>
+                            <h3>Your Minted Arts Collections</h3>
                         </div>
                     </div>
                     <div class="col-auto">
-                        <div class="breadcrumbs"><a href="#">NFT </a><span><i
-                                    class="ri-arrow-right-s-line"></i></span><a href="#">Collections</a></div>
+                        <div class="breadcrumbs"><a href="{{ route('user.dashboard') }}">Home </a><span><i
+                                    class="ri-arrow-right-s-line"></i></span><a href="{{ route('list.collection') }}">Collections</a></div>
                     </div>
                 </div>
             </div>
             <div class="col-12">
                 <div class="card filter-tab">
                     <div class="card-header">
-                        <div class="filter-nav"><a class="active">Artwork</a><a>Games</a><a>Others</a></div>
+                        <div class="filter-nav"><a class="active">Minted Arts</a><a>Games</a><a>Others</a></div>
                     </div>
                     <div class="card-body bs-0 p-0 bg-transparent">
                         <div class="row">
